@@ -1,6 +1,21 @@
 <%- include("partials/header.ejs") %>
 
 <!-- show the result from the api  -->
+<div class="result-container">
+    <% if(locals.city){%>
+        <h1>Weather for <%=locals.city %> </h1>
+        <ul>
+            <li>Description: <%=description%>  </li>
+            <li>Temperature: <%=locals.temperature-273%> C </li>
+            <li>Maximum Temperature: <%=locals.maxTemperature-273%> C </li>
+            <li>Minimum Temperature: <%=locals.minTemperature-273%> C </li>
+        </ul>
+   <% } else {%>
+    <h2>City Not Found!!</h2>
+    <% }%>
+
+    <button class="btn"><a href="/">Check for Another City</a></button>
+</div>
     
 </body>
 </html>
