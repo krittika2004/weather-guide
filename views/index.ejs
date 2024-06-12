@@ -1,0 +1,13 @@
+<%- include("partials/header.ejs") %>
+
+    <!-- A form to collect city names -->
+     <div class="form-container">
+        <form method="post" formaction="/get-weather">
+            <label for="cityInput">Enter City Name: </label>
+           <input type="text" id="cityInput" name="cityName">
+           <input type="submit" value="Get Weather Details">
+         </form>
+     </div>
+    
+</body>
+</html>
